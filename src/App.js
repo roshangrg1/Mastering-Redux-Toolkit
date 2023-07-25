@@ -1,9 +1,18 @@
-import './App.css';
-import Product from './component/Product';
+import "./App.css";
+import Product from "./component/Product";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Card from "./component/Card";
+import Navbar from "./component/Navbar";
 function App() {
   return (
     <div className="App">
-      <Product/>
+      <Navbar />
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Product />} />
+          <Route path="/cart" element={<Card />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -12,7 +12,7 @@ const Product = () => {
   }, []);
   return (
     <div>
-      <h1>Product DashBoard</h1>
+      <h1 className="text-center text-[30px] font-sans text-[blue] my-5">Product Listing Page</h1>
     
       <ProductCard  products={products}/>
     </div>
